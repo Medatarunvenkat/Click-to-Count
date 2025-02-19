@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text
+        {
+            font-size: 70px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aqua;
+            display: block;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .container
+        {
+            text-align: center;
+        }
+        .buttons
+        {
+            padding: 10px;
+            font-size: 20px;
+            margin-left: 20px;
+            background-color: aquamarine;
+        }
+        .buttons:hover{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <label id="text">0</label>
+    <div class="container">
+        <button id="inc" class="buttons">Increment</button>
+        <button id="decr" class="buttons">Decrement</button>
+        <button id="reset" class="buttons">Reset</button>
+    </div>
+</body>
+    <script>
+        const inc=document.getElementById("inc");
+        const decr=document.getElementById("decr");
+        const reset=document.getElementById("reset");
+        const text=document.getElementById("text");
+        let count=0;
+        inc.onclick=function()
+        {
+            count++;
+            text.textContent=count;
+        }
+        decr.onclick=function()
+        {
+            count--;
+            text.textContent=count;
+        }
+        reset.onclick=function()
+        {
+            count=0;
+            text.textContent=count;
+        }
+    </script>
+</html>
